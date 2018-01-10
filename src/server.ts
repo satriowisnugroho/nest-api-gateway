@@ -26,4 +26,4 @@ async function bootstrap() {
   app.useGlobalFilters(new HttpExceptionFilter());
   await app.listen(process.env.APP_PORT);
 }
-bootstrap().then(() => console.log(`Application is listening on port ${process.env.APP_PORT}`));
+bootstrap().then(() => console.log(`Api Gateway is listening on port ${process.env.APP_PORT}`));
