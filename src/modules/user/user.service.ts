@@ -4,9 +4,7 @@ import { Component, Inject } from '@nestjs/common';
 export class UserService {
   constructor(@Inject('Broker') private readonly broker: any) {}
 
-  async list(): Promise<any> {
-    const res = await this.broker.call('user.list');
-
-    return res;
+  list(): any {
+    return this.broker.call('user.list');
   }
 }

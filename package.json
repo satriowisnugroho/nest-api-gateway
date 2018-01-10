@@ -16,6 +16,7 @@
     "@nestjs/testing": "^4.0.1",
     "@nestjs/websockets": "^4.0.1",
     "@types/passport-jwt": "^2.0.24",
+    "avsc": "^5.1.2",
     "cheerio": "^1.0.0-rc.2",
     "dotenv": "^4.0.0",
     "jsonwebtoken": "^8.0.1",
