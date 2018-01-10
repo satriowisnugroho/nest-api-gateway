@@ -13,6 +13,7 @@ export const BrokerProviders = [
         logger: console,
       });
       await broker.start();
+      await broker.repl();
 
       return broker;
     },
