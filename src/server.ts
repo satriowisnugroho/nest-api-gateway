@@ -1,6 +1,7 @@
 import * as dotenv from 'dotenv';
 import * as bodyParser from 'body-parser';
 import * as Raven from 'raven';
+import * as cors from 'cors';
 import { NestFactory } from '@nestjs/core';
 import { ApplicationModule } from './modules/app.module';
 import {
@@ -15,6 +16,7 @@ Raven.config(process.env.SENTRY_DSN).install();
 
 async function bootstrap() {
   const app = await NestFactory.create(ApplicationModule);
+  app.use(cors());
   app.use(Raven.requestHandler());
   app.use(loggerMiddleware());
   app.use(bodyParser.json());
