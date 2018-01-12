@@ -8,7 +8,7 @@ export const BrokerProviders = [
     useFactory: async () => {
       const broker = new ServiceBroker({
         namespace: 'kioson',
-        nodeID: process.argv[2] || `server-${process.pid}`,
+        nodeID: process.argv[2] || `Api Gateway server-${process.pid}`,
         transporter: new NatsTransporter(),
         logger: console,
         serializer: 'Avro',
