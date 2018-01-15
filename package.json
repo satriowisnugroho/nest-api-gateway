@@ -10,11 +10,11 @@
     "start:prod": "node dist/server.js"
   },
   "dependencies": {
-    "@nestjs/common": "^4.0.1",
-    "@nestjs/core": "^4.0.1",
-    "@nestjs/microservices": "^4.0.1",
-    "@nestjs/testing": "^4.0.1",
-    "@nestjs/websockets": "^4.0.1",
+    "@nestjs/common": "^4.5.9",
+    "@nestjs/core": "^4.5.10",
+    "@nestjs/microservices": "^4.5.8",
+    "@nestjs/testing": "^4.5.5",
+    "@nestjs/websockets": "^4.5.8",
     "@types/passport-jwt": "^2.0.24",
     "avsc": "^5.1.2",
     "cheerio": "^1.0.0-rc.2",

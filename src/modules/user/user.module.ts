@@ -4,11 +4,11 @@ import {
 } from '@nestjs/common';
 import { UserService } from './user.service';
 import { UserController } from './user.controller';
-import { BrokerProviders } from '../common/providers/broker.providers';
+import { BrokerModule } from '../common/index';
 
 @Module({
-  components: [UserService, ...BrokerProviders],
+  imports: [BrokerModule],
+  components: [UserService],
   controllers: [UserController],
-  exports: [...BrokerProviders],
 })
 export class UserModule {}

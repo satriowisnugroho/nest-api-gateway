@@ -6,13 +6,12 @@ import {
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
-import { AuthMiddleware } from '../common/index';
-import { BrokerProviders } from '../common/providers/broker.providers';
+import { AuthMiddleware, BrokerModule } from '../common/index';
 
 @Module({
-  components: [AuthService, ...BrokerProviders],
+  imports: [BrokerModule],
+  components: [AuthService],
   controllers: [AuthController],
-  exports: [...BrokerProviders],
 })
 export class AuthModule implements NestModule {
   public configure(consumer: MiddlewaresConsumer) {

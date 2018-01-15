@@ -6,7 +6,7 @@ export * from './interceptors/transform.interceptor';
 export * from './middlewares/auth.middleware';
 export * from './middlewares/image.middleware';
 export * from './middlewares/logger.middleware';
-export * from './providers/broker.providers';
 export * from './utils/global.util';
 export * from './utils/logger.util';
 export * from './utils/request.util';
+export * from './broker/broker.module';
